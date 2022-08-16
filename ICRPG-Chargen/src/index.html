@@ -8,7 +8,6 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <p>Insert logo here</p>
   <p style="text-align:right;">Include button here</p>
-
 </head>
 <body>
   <table id="attribs" name="attribs" style="border: 1px solid black;">
@@ -16,10 +15,12 @@
       <th colspan="4">Character Sheet</th>
     </tr>
     <tr>
-      <td>Room diff</td>
-      <td><input type="number" size="2" min="0" max="18" id="roomdiff" name="roomdiff"></td>
-      <td>Death timer</td>
-      <td><input type="number" size="2" min="-6" max="6" id="deathtimer" name="deathtimer"></td>
+      <td colspan="2">Player name</td>
+      <td colspan="2"><input type="text" name="playername" id="playername"></td>
+    </tr>
+    <tr>
+      <td colspan="2">Character Name</td>
+      <td colspan="2"><input type="text" name="charname" id="charname"></td>
     </tr>
     <tr>
       <th>Stats</th>
@@ -127,8 +128,14 @@
       <td colspan="2"><input type="text" name="equipa" id="equipa"></td>
       <td colspan="2"><input type="text" name="carrya" id="carrya"></td>
     </tr>
+    <tr>
+      <td>Room diff</td>
+      <td><input type="number" size="2" min="0" max="18" id="roomdiff" name="roomdiff"></td>
+      <td>Death timer</td>
+      <td><input type="number" size="2" min="-6" max="6" id="deathtimer" name="deathtimer"></td>
+    </tr>
   </table>
-
+  Created by Zane Ives (with the approval of Runehammer Games)
   <app-root></app-root>
   <script></script>
 </body>
