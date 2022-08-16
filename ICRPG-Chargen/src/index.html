@@ -10,9 +10,21 @@
   <p style="text-align:right;">Include button here</p>
 </head>
 <body>
-  <table id="attribs" name="attribs" style="border: 1px solid black; width:25%;">
+  
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      border-style: groove;
+    }
+    th {
+      text-align: left;
+    }
+  </style>
+  
+  <table id="attribs" name="attribs" style="width:40%">
     <tr>
-      <th colspan="4">Character Sheet</th>
+      <th colspan="4" style="text-align:center"><h2>Character Sheet</h2></th>
     </tr>
     <tr>
       <td colspan="2">Player name</td>
@@ -21,13 +33,12 @@
     <tr>
       <td colspan="2">Character Name</td>
       <td colspan="2"><input type="text" name="charname" id="charname"></td>
-    </tr>
-    <tr><td colspan="4"><hr></td></tr>
+    </tr>    
     <tr>
-      <th style="text-align:left">Stats</th>
-      <th style="text-align:left">Amount</th>
-      <th style="text-align:left">Effort</th>
-      <th style="text-align:left">Amount</th>
+      <th>Stats</th>
+      <th>Amount</th>
+      <th>Effort</th>
+      <th>Amount</th>
     </tr>
     <tr>
       <td>Strength</td>
@@ -86,8 +97,8 @@
       </td>
     </tr>
     <tr>
-      <th colspan="2" style="text-align:left">Equipped</th>
-      <th colspan="2" style="text-align:left">Carried</th>
+      <th colspan="2">Equipped</th>
+      <th colspan="2">Carried</th>
     </tr>
     <tr>
       <td colspan="2"><input type="text" name="equip1" id="equip1"></td>
@@ -136,6 +147,7 @@
       <td><input type="number" size="2" min="-6" max="6" id="deathtimer" name="deathtimer"></td>
     </tr>
   </table>
+
   Created by Zane Ives (with the approval of Runehammer Games)
   <app-root></app-root>
   <script></script>
