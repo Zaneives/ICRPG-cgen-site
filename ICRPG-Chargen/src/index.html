@@ -6,8 +6,72 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <p>Insert logo here</p>
+  <p style="text-align:right;">Include button here</p>
+
 </head>
 <body>
+  <h1>Character Sheet</h1>
+  <br> Room <input type="number" size="2" min="0" max="18" id="roomdiff" name="roomdiff">
+  <table id="attribs" name="attribs" style="border: 1px solid black;">
+    <tr>
+      <th>Stats</th>
+      <th>Amount</th>
+      <th>Effort</th>
+      <th>Amount</th>
+    </tr><tr>
+      <td>Strength</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="str_attr" name="str_attr">
+      </td>
+      <td>Armor</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="armor" name="armor">
+      </td>      
+    </tr><tr>
+      <td>Dexterity</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="dex_attr" name="dex_attr">
+      </td>
+      <td>Basic</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="basic_eff" name="basic_eff">
+      </td>      
+    </tr><tr>
+      <td>Constitution</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="cons_attr" name="cons_attr">
+      </td>
+      <td>Weapon</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="wep_eff" name="wep_eff">
+      </td>      
+    </tr><tr>
+      <td>Intelligence</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="int_attr" name="int_attr">
+      </td>
+      <td>Magic</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="mag_eff" name="mag_eff">
+      </td>      
+    </tr><tr>
+      <td>Wisdom</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="wis_attr" name="wis_attr">
+      </td>
+      <td>Ultimate</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="ult_eff" name="ult_eff">
+      </td>      
+    </tr><tr>
+      <td>Charisma</td>
+      <td>
+        <input type="number" size="2" min="-9" max="10" id="cha_attr" name="cha_attr">
+      </td>
+    </tr>
+  </table>
   <app-root></app-root>
+  <script></script>
 </body>
 </html>
