@@ -11,15 +11,23 @@
 
 </head>
 <body>
-  <h1>Character Sheet</h1>
-  <br> Room <input type="number" size="2" min="0" max="18" id="roomdiff" name="roomdiff">
   <table id="attribs" name="attribs" style="border: 1px solid black;">
+    <tr>
+      <td style="text-align:right;">Character Sheet</td>
+    </tr>
+    <tr>
+      <td>Room diff</td>
+      <td><input type="number" size="2" min="0" max="18" id="roomdiff" name="roomdiff"></td>
+      <td>Death timer</td>
+      <td><input type="number" size="2" min="-6" max="6" id="roomdiff" name="roomdiff"></td>
+    </tr>
     <tr>
       <th>Stats</th>
       <th>Amount</th>
       <th>Effort</th>
       <th>Amount</th>
-    </tr><tr>
+    </tr>
+    <tr>
       <td>Strength</td>
       <td>
         <input type="number" size="2" min="-9" max="10" id="str_attr" name="str_attr">
@@ -28,7 +36,8 @@
       <td>
         <input type="number" size="2" min="-9" max="10" id="armor" name="armor">
       </td>      
-    </tr><tr>
+    </tr>
+    <tr>
       <td>Dexterity</td>
       <td>
         <input type="number" size="2" min="-9" max="10" id="dex_attr" name="dex_attr">
@@ -37,7 +46,8 @@
       <td>
         <input type="number" size="2" min="-9" max="10" id="basic_eff" name="basic_eff">
       </td>      
-    </tr><tr>
+    </tr>
+    <tr>
       <td>Constitution</td>
       <td>
         <input type="number" size="2" min="-9" max="10" id="cons_attr" name="cons_attr">
@@ -46,7 +56,8 @@
       <td>
         <input type="number" size="2" min="-9" max="10" id="wep_eff" name="wep_eff">
       </td>      
-    </tr><tr>
+    </tr>
+    <tr>
       <td>Intelligence</td>
       <td>
         <input type="number" size="2" min="-9" max="10" id="int_attr" name="int_attr">
@@ -55,7 +66,8 @@
       <td>
         <input type="number" size="2" min="-9" max="10" id="mag_eff" name="mag_eff">
       </td>      
-    </tr><tr>
+    </tr>
+    <tr>
       <td>Wisdom</td>
       <td>
         <input type="number" size="2" min="-9" max="10" id="wis_attr" name="wis_attr">
@@ -64,13 +76,59 @@
       <td>
         <input type="number" size="2" min="-9" max="10" id="ult_eff" name="ult_eff">
       </td>      
-    </tr><tr>
+    </tr>
+    <tr>
       <td>Charisma</td>
       <td>
         <input type="number" size="2" min="-9" max="10" id="cha_attr" name="cha_attr">
       </td>
     </tr>
+    <tr>
+      <th colspan="2">Equipped</th>
+      <th colspan="2">Carried</th>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip1" id="equip1"></td>
+      <td colspan="2"><input type="text" name="carry1" id="carry1"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip2" id="equip2"></td>
+      <td colspan="2"><input type="text" name="carry2" id="carry2"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip3" id="equip3"></td>
+      <td colspan="2"><input type="text" name="carry3" id="carry3"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip4" id="equip4"></td>
+      <td colspan="2"><input type="text" name="carry4" id="carry4"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip5" id="equip5"></td>
+      <td colspan="2"><input type="text" name="carry5" id="carry5"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip6" id="equip6"></td>
+      <td colspan="2"><input type="text" name="carry6" id="carry6"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip7" id="equip7"></td>
+      <td colspan="2"><input type="text" name="carry7" id="carry7"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip8" id="equip8"></td>
+      <td colspan="2"><input type="text" name="carry8" id="carry8"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equip9" id="equip9"></td>
+      <td colspan="2"><input type="text" name="carry9" id="carry9"></td>
+    </tr>
+    <tr>
+      <td colspan="2"><input type="text" name="equipa" id="equipa"></td>
+      <td colspan="2"><input type="text" name="carrya" id="carrya"></td>
+    </tr>
   </table>
+
   <app-root></app-root>
   <script></script>
 </body>
