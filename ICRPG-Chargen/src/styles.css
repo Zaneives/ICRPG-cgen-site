@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 body {
     background-color: ivory;
 }
@@ -7,6 +8,7 @@ table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     border-style: groove;
+    background-color: rgb(233, 225, 151);
 }
 
 th {
@@ -14,5 +16,53 @@ th {
 }
 
 .header {
-    background-color: blue;
+    background-color: rgb(67, 182, 32);
 }
+
+.charsheet {
+    color: black;
+}
+
+.playernameetc {
+    color: black;
+}
+
+.charstats {
+    color: black;
+}
+
+.charinv {
+    color: black;
+}
+
+.charmisc {
+    color: black;
+}
+
+
+
+/*
+body {
+    background-color: yellow;
+}
+.myclass {
+    background-color: white;
+}
+#myid {
+    background-color: black;
+}
+.myclass h1 {
+    color: gray;
+    text-align: center;
+}
+.myclass p {
+    color: black;
+}
+#myid h1 {
+    color: yellow;
+    text-align: center;
+}
+#myid p {
+    color: white;
+}
+*/
