@@ -4,11 +4,11 @@ body {
     background-color: ivory;
 }
 
-table, th, td {
-    /* border: 1px solid black; */
-    /* border-collapse: collapse; */    
-    /* background-color: rgb(233, 225, 151); */
-}
+/* table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;    
+    background-color: rgb(233, 225, 151);
+} */
 
 th, td {
     text-align: left;
@@ -18,6 +18,42 @@ th, td {
 }
 
 td:hover, th:hover { background-color: blue;}
+
+.col_quarter {
+    float: left;
+    width: 25%;    
+}
+
+.col_third {
+    float: left;
+    width: 33%;
+}
+
+.col_half {
+    float: left;
+    width: 50%;    
+}
+
+.col_threequarter {
+    float: left;
+    width: 75%;
+}
+
+.col_border {
+    border: 1px solid black;
+}
+
+@media (max-width: 600px) {
+    .col_half, .col_third {
+        width: 100%;
+        height: auto;
+    }
+    .col_quarter {
+        width: 50%;
+        height: auto;
+    }
+}
+
 
 
 .header {
@@ -42,6 +78,10 @@ td:hover, th:hover { background-color: blue;}
 
 .charmisc {
     color: black;
+}
+
+.dicethrower {
+    color: green
 }
 
 
