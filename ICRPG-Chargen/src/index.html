@@ -11,150 +11,155 @@
 </head>
 
 <body>  
+  
+  <app-root></app-root>
+
   <div class="header">
     <p>Insert logo here</p>
-    <p style="text-align:right;">Include button here</p>
+    <p class="browsebutt"><a href="javascript:alert('Fuck Yeah!');" style="text-decoration:none;">&#9994;</a>Lick me</p>
     <hr>
   </div>
   
   <div class="charsheet">
-    <table id="attribs" name="attribs" style="width:40%">
-      <tr>
-        <th colspan="4" style="text-align:center"><h2>Character Sheet</h2></th>
-      </tr>
-      
-      <div class="playernameetc">
+    <form>
+      <table id="attribs" name="attribs" style="width:40%">
         <tr>
-          <td colspan="1">Player name</td>
-          <td colspan="3"><input type="text" name="playername" id="playername" size="30"></td>
+          <th colspan="4" style="text-align:center"><h2>Character Sheet</h2></th>
         </tr>
-        <tr>
-          <td colspan="1">Character Name</td>
-          <td colspan="3"><input type="text" name="charname" id="charname" size="30"></td>
-        </tr>
-      </div>      
-      
-      <div class="charstats">
-        <tr>
-          <th>Stats</th>
-          <th>Amount</th>
-          <th>Effort</th>
-          <th>Amount</th>
-        </tr>
-        <tr>
-          <td>Strength</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="str_attr" name="str_attr">
-          </td>
-          <td>Armor</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="armor" name="armor">
-          </td>      
-        </tr>
-        <tr>
-          <td>Dexterity</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="dex_attr" name="dex_attr">
-          </td>
-          <td>Basic</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="basic_eff" name="basic_eff">
-          </td>      
-        </tr>
-        <tr>
-          <td>Constitution</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="cons_attr" name="cons_attr">
-          </td>
-          <td>Weapon</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="wep_eff" name="wep_eff">
-          </td>      
-        </tr>
-        <tr>
-          <td>Intelligence</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="int_attr" name="int_attr">
-          </td>
-          <td>Magic</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="mag_eff" name="mag_eff">
-          </td>      
-        </tr>
-        <tr>
-          <td>Wisdom</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="wis_attr" name="wis_attr">
-          </td>
-          <td>Ultimate</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="ult_eff" name="ult_eff">
-          </td>      
-        </tr>
-        <tr>
-          <td>Charisma</td>
-          <td>
-            <input type="number" size="2" min="-9" max="10" id="cha_attr" name="cha_attr">
-          </td>
-        </tr>
-      </div>
-      
-      <div class="charinv">
-        <tr>
-          <th colspan="2">Equipped</th>
-          <th colspan="2">Carried</th>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip1" id="equip1" size="35"></td>
-          <td colspan="2"><input type="text" name="carry1" id="carry1" size="35"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip2" size="35" id="equip2"></td>
-          <td colspan="2"><input type="text" name="carry2" size="35" id="carry2"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip3" size="35" id="equip3"></td>
-          <td colspan="2"><input type="text" name="carry3" size="35" id="carry3"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip4" size="35" id="equip4"></td>
-          <td colspan="2"><input type="text" name="carry4" size="35" id="carry4"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip5" size="35" id="equip5"></td>
-          <td colspan="2"><input type="text" name="carry5" size="35" id="carry5"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip6" size="35" id="equip6"></td>
-          <td colspan="2"><input type="text" name="carry6" size="35" id="carry6"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip7" size="35" id="equip7"></td>
-          <td colspan="2"><input type="text" name="carry7" size="35" id="carry7"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip8" size="35" id="equip8"></td>
-          <td colspan="2"><input type="text" name="carry8" size="35" id="carry8"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equip9" size="35" id="equip9"></td>
-          <td colspan="2"><input type="text" name="carry9" size="35" id="carry9"></td>
-        </tr>
-        <tr>
-          <td colspan="2"><input type="text" name="equipa" size="35" id="equipa"></td>
-          <td colspan="2"><input type="text" name="carrya" size="35" id="carrya"></td>
-        </tr>
-      </div>
-      
-      <div class="charmisc">
-        <tr>
-          <td>Room diff</td>
-          <td><input type="number" size="2" min="0" max="18" id="roomdiff" name="roomdiff"></td>
-          <td>Death timer</td>
-          <td><input type="number" size="2" min="-6" max="6" id="deathtimer" name="deathtimer"></td>
-        </tr>
-      </div>  
-    </table>
+        
+        <div class="playernameetc">
+          <tr>
+            <td colspan="1"><label for="playername">Player name</label></td>
+            <td colspan="3"><input type="text" name="playername" id="playername" size="30"></td>
+          </tr>
+          <tr>
+            <td colspan="1"><label for="charname">Character Name</label></td>
+            <td colspan="3"><input type="text" name="charname" id="charname" size="30"></td>
+          </tr>
+        </div>      
+        
+        <div class="charstats">
+          <tr>
+            <th>Stats</th>
+            <th>Amount</th>
+            <th>Effort</th>
+            <th>Amount</th>
+          </tr>
+          <tr>
+            <td><label for="str_attr">Strength</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="str_attr" name="str_attr">
+            </td>
+            <td><label for="armor">Armor</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="armor" name="armor">
+            </td>      
+          </tr>
+          <tr>
+            <td><label for="dex_attr">Dexterity</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="dex_attr" name="dex_attr">
+            </td>
+            <td><label for="basic_eff">Basic</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="basic_eff" name="basic_eff">
+            </td>      
+          </tr>
+          <tr>
+            <td><label for="cons_attr">Constitution</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="cons_attr" name="cons_attr">
+            </td>
+            <td><label for="wep_eff">Weapon</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="wep_eff" name="wep_eff">
+            </td>      
+          </tr>
+          <tr>
+            <td><label for="int_attr">Intelligence</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="int_attr" name="int_attr">
+            </td>
+            <td><label for="mag_eff">Magic</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="mag_eff" name="mag_eff">
+            </td>      
+          </tr>
+          <tr>
+            <td><label for="wis_attr">Wisdom</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="wis_attr" name="wis_attr">
+            </td>
+            <td><label for="ult_eff">Ultimate</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="ult_eff" name="ult_eff">
+            </td>      
+          </tr>
+          <tr>
+            <td><label for="cha_attr">Charisma</label></td>
+            <td>
+              <input type="number" size="2" min="-9" max="10" id="cha_attr" name="cha_attr">
+            </td>
+          </tr>
+        </div>
+        
+        <div class="charinv">
+          <tr>
+            <th colspan="2">Equipped</th>
+            <th colspan="2">Carried</th>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip1" id="equip1" size="35"></td>
+            <td colspan="2"><input type="text" name="carry1" id="carry1" size="35"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip2" size="35" id="equip2"></td>
+            <td colspan="2"><input type="text" name="carry2" size="35" id="carry2"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip3" size="35" id="equip3"></td>
+            <td colspan="2"><input type="text" name="carry3" size="35" id="carry3"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip4" size="35" id="equip4"></td>
+            <td colspan="2"><input type="text" name="carry4" size="35" id="carry4"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip5" size="35" id="equip5"></td>
+            <td colspan="2"><input type="text" name="carry5" size="35" id="carry5"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip6" size="35" id="equip6"></td>
+            <td colspan="2"><input type="text" name="carry6" size="35" id="carry6"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip7" size="35" id="equip7"></td>
+            <td colspan="2"><input type="text" name="carry7" size="35" id="carry7"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip8" size="35" id="equip8"></td>
+            <td colspan="2"><input type="text" name="carry8" size="35" id="carry8"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equip9" size="35" id="equip9"></td>
+            <td colspan="2"><input type="text" name="carry9" size="35" id="carry9"></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="text" name="equipa" size="35" id="equipa"></td>
+            <td colspan="2"><input type="text" name="carrya" size="35" id="carrya"></td>
+          </tr>
+        </div>
+        
+        <div class="charmisc">
+          <tr>
+            <td>Room diff</td>
+            <td><input type="number" size="2" min="0" max="18" id="roomdiff" name="roomdiff"></td>
+            <td>Death timer</td>
+            <td><input type="number" size="2" min="-6" max="6" id="deathtimer" name="deathtimer"></td>
+          </tr>
+        </div>  
+      </table>
+    </form>  
   </div>
   Created by Zane Ives (with the approval of Runehammer Games)
 
@@ -162,20 +167,6 @@
     <p style="text-align:right;">Dice thrower</p>
   </div>
 
-  <div class="col_half" style="background-color:yellow;"><p>testing purposes</p></div>
-  <div class="col_half" style="background-color: blueviolet;"><p>more testing</p></div>
-  
-  <div class="col_quarter" style="background-color: gold;"><p>Stat</p></div>
-  <div class="col_quarter" style="background-color: whitesmoke;"><p>Amount</p></div>
-  <div class="col_quarter" style="background-color: gold;"><p>Effect</p></div>
-  <div class="col_quarter" style="background-color: whitesmoke;"><p>Amount</p></div>
-
-  <div class="col_border col_quarter" style="background-color: gold;"><p>Stat</p></div>
-  <div class="col_border col_quarter" style="background-color: whitesmoke;"><p>Amount</p></div>
-  <div class="col_border col_quarter" style="background-color: gold;"><p>Effect</p></div>
-  <div class="col_border col_quarter" style="background-color: whitesmoke;"><p>Amount</p></div>
-
-  <app-root></app-root>
-  <script></script>
+  <!-- <app-root></app-root> -->
 </body>
 </html>

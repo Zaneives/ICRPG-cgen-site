@@ -1,0 +1,80 @@
+.bloo {
+    color: blue;
+}
+.header {
+    background-color: yellow;
+}
+
+div {
+    flex-grow: 1;
+}
+
+.container {
+    display: flex;
+    border: 6px solid black;
+    gap: 3px 7px;
+    margin: 0;
+    padding: 0;
+    flex-flow: row wrap;
+    width: min(900px, 100%);
+}
+.colflow {
+    flex-flow:column nowrap;
+    border: 1px solid black;
+    flex-grow: 0;
+}
+.flexbreak {
+    flex-basis: 100%;
+    height: 0;
+}
+.colbreak {
+    flex-basis: 100%;
+    width: 0;
+}
+
+.width20pc {
+    width: max(15%, 150px);
+  }
+.width70pc {
+    width: max(70%, 150px);
+}
+
+.charsheet {
+    background-color: ivory;
+}
+.charinfo {
+    background-color: gold;
+}
+.charstats {
+    background-color: yellow;
+    top: 0px;
+}
+.chareff {
+    background-color: orange;
+}
+.charstatus {
+    background-color:red;
+}
+.charinventory {
+    background-color:rgb(86, 152, 228);
+    margin: 0;
+    padding: 0;
+}
+.charability {
+    background-color:lime;
+}
+.charmastery {
+    background-color:green;
+}
+
+
+@media (max-width: 600px) {
+    .bloo {
+        color: black;
+        background-color: green;
+    }
+    div {
+        flex: 1 1 100%;
+    }
+    
+}
