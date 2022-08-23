@@ -11,7 +11,8 @@ th, td {
     text-align: left;
     border: 1px solid black;
     border-radius: 10px;    
-    padding-left: 20px;    
+    padding-left: 20px;  
+      
 }
 
 td:hover, th:hover { background-color: blue;}
