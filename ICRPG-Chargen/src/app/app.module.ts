@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { CharsheetComponent } from './charsheet/charsheet.component';
+import { CharstatsService } from './charstats.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,7 @@ import { CharsheetComponent } from './charsheet/charsheet.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CharstatsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
