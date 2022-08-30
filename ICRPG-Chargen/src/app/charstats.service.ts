@@ -98,11 +98,16 @@ export class CharstatsService {
   heroCoin = false;
   deathTimer = 0;            
   
-  carryName: string = "";
-  isEquipped: boolean = false;
-  carryDesc: string = "";
-  carryInteraction?: string = "";
+  // carryName: string = "";
+  // isEquipped: boolean = false;
+  // carryDesc: string = "";
+  // carryInteraction?: string = "";
   
+  carryName = ["","","","","","","","","","","","","","","","","","","",""]
+  isEquipped = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false]
+  carryDesc = ["","","","","","","","","","","","","","","","","","","",""]
+  carryInteraction = ["","","","","","","","","","","","","","","","","","","",""]
+
   abilityType: string = "";
   abilityName: string = "";
   abilityDesc: string = "";
