@@ -5,3 +5,5 @@ But I don't see the new folders on the github site
 
 ## Second note
 Okay, it looks like the angular files have been added. It might have taken a while for it to reflect on the site.
+
+## Added chargen repository to my other laptop
