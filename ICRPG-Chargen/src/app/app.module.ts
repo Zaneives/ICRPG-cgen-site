@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CharsheetComponent } from './charsheet/charsheet.component';
 import { CharstatsService } from './charstats.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import { CharstatsService } from './charstats.service';
     CharsheetComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [CharstatsService],
   bootstrap: [AppComponent]
