@@ -42,9 +42,7 @@ export class ICRPGcharsheet {
     constructor () {
     
     }
-    totalSpec(specarray:number) {
-        specarray[1] = specarray[2] + specarray[3] + specarray[4];
-    }
+   
 }
 
 // CharInfo
