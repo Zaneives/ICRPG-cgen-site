@@ -16,7 +16,7 @@ div {
     margin: 0;
     padding: 0;
     flex-flow: row wrap;
-    width: min(900px, 100%);
+    // width: min(900px, 100%);
 }
 .colflow {
     flex-flow:column nowrap;
@@ -65,6 +65,10 @@ div {
 }
 .charmastery {
     background-color:green;
+}
+
+.totaldie {
+    font-size: 50px;
 }
 
 
