@@ -63,7 +63,7 @@
       <table>
         <tr>
           <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;">STR</h1></td>
-          <td><h1 class="totaldie">0</h1></td>
+          <td><h1 class="totaldie" id="strtotal" onmousedown="rollDie()">3</h1></td>
           <td>
             <tr><input type="number" name="" id="strbase" size="2"><label for="strbase">Base</label></tr>            
             <tr><input type="number" name="" id="" size="2">Life Form</tr>            
@@ -366,5 +366,17 @@
 </div>
 <br><br><br><br>
 <div>
+  <p id="rolldie">click a stat</p>
   this is a test
 </div>
+<!-- <script>
+  function rollDie() {
+    let x = document.getElementById("rolldie");
+    let statCheck = document.getElementById("strtotal")
+    let rolled = Math.random() * 20 + 1
+    let totalRoll = rolled + statCheck.innerHTML
+    console.log(rolled)
+    console.log(totalRoll)
+    x.innerHTML = `You rolled a ${totalRoll}`
+  }
+</script> -->
