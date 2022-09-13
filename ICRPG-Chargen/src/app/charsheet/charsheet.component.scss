@@ -14,7 +14,7 @@ div {
     border: 6px solid black;
     gap: 3px 7px;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     flex-flow: row wrap;
     // width: min(900px, 100%);
 }
@@ -41,6 +41,8 @@ div {
 
 .charsheet {
     background-color: ivory;
+    border-radius: 6px;
+    border-width: 4px;
 }
 .charinfo {
     background-color: gold;

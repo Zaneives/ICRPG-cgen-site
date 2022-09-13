@@ -1,382 +1,256 @@
-<div class="rawdata bloo">
-  <pre>
-  Character Sheet
-  Character (Name, World Name, Story, Life Form, Type)
-  Character Name
-  World Name
-  Story
-  Life Form/Species/Race
-  Type/Specialization/Class
-  
-  Status (HP, Defense (Con, Loot), Hero Coin, Death Timer)
-  HP
-  Defense
-  Gold
-  Hero Coin
-  Room Difficulty
-  Death Timer
-
-  Stats (Name, Base, Life Form, Type , Loot, Total)
-  Strength
-  Dexterity
-  Constitution
-  Intelligence
-  Wisdom
-  Charisma
-      
-  Effort (Name, Base, Life Form, Type, Loot, Total)
-  Basic
-  Weapon
-  Magic
-  Ultimate
-
-  Equipped * 10 (Name, Description, Interaction)
-  Carried * 10 (Name, Description, Interaction)
-
-  Abilities * 6 (Name, Description, Interaction)
-  Powers * 4 (Name, Description, Interaction)
-  Augments * x (Name, Description, Interaction)
-
-  Mastery
-
-  </pre>
-</div>
 <div class="header">
   This is the header
-<br><br><br><br>
 </div>
-<div class="container charsheet">
-  <div class="charinfo">
-    <label for="charname">Name: </label><input class="width20pc" id="charname" type="text">
-    <label for="charworld">World: </label><input class="width20pc" id="charworld" type="text">
-    <label for="charlifeform">Life Form: </label><input class="width20pc" id="charlifeform" type="text">
-    <label for="chartype">Type: </label><input class="width20pc" id="chartype" type="text">
-  </div>
-  <div class="flexbreak"></div>
-  <div class="charinfo">
-    <label for="charstory">Story: </label><input class="width70pc" id="charstory" type="text">
-  </div>
-  <div class="flexbreak"></div>
 
-  <div class="colflow">
-    <div class="charstats">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;">STR</h1></td>
-          <td><h1 class="totaldie" id="strtotal" onmousedown="rollDie()">3</h1></td>
-          <td>
-            <tr><input type="number" name="" id="strbase" size="2"><label for="strbase">Base</label></tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+<div class="charsheet container">
+  <form #charSheet="ngForm" (ngSubmit)="charDetails(charSheet)">
+    <h2>Character Sheet</h2>
+    <div>
+      <label for=""> Character Name: </label>
+      <input type="text" name="" ngModel>
     </div>
-    <div class="charstats">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>DEX</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+    <div>
+      <label for=""> World Name: </label>
+      <input type="text" name="" ngModel>
     </div>
-    <div class="charstats">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>CON</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+    <div>
+      <label for=""> Story: </label>
+      <input type="text" name="" ngModel>
     </div>
-    <div class="charstats">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>INT</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+    <div>
+      <label for=""> Life Form: </label>
+      <input type="text" name="" ngModel>
     </div>
-    <div class="charstats">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>WIS</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+    <div>
+      <label for=""> Type: </label>
+      <input type="text" name="" ngModel>
     </div>
-    <div class="charstats">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>CHA</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+    <div>
+      <h2>Status</h2>    
+      <div>
+        <label for=""> HP: </label>
+        <input type="number" name="" ngModel>
+      </div>
+      <div>
+        <label for=""> Defense: </label>
+        <input type="number" name="" ngModel>
+      </div>
+      <div>
+        <label for=""> Gold: </label>
+        <input type="number" name="" ngModel>
+      </div>
+      <div>
+        <label for=""> Death Timer: </label>
+        <input type="number" name="" ngModel>
+      </div>
+      <div>
+        <label for=""> Hero Coin: </label>
+        <input type="checkbox" name="" ngModel>
+      </div>
     </div>
-  </div>
-
-  <div class="colflow">
-    <div class="chareff">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>BASIC</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+    <div>
+      <h2>Stats</h2>    
+      <div>
+        <h3>Strength</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>
+      </div>
+      <div>
+        <h3>Dexterity</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>
+      </div>
+      <div>
+        <h3>Constitution</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
+      <div>
+        <h3>Intelligence</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
+      <div>
+        <h3>Wisdom</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
+      <div>
+        <h3>Charisma</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
     </div>
-    <div class="chareff">
-      <table>
-        <tr>
-          <td><h3 style="padding:0px; margin:0px;"><b>WEAPONS<br>& TOOLS</b></h3></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+    <div>
+      <h2>Effort</h2>
+      <div>
+        <h3>Basic</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
+      <div>
+        <h3>Weapons & Tools</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
+      <div>
+        <h3>Guns</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
+      <div>
+        <h3>Energy & Magic</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
+      <div>
+        <h3>Ultimate</h3>
+        Total: <span>0</span><br>
+        <label for="">Base: <input type="number" name="" ngModel></label><br>
+        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
+        <label for="">Ability: <input type="number" name="" ngModel></label><br>
+        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+      </div>
     </div>
-    <div class="chareff">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>GUNS</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
+    <div ngModelGroup="equipment">
+      <h2>Equipment</h2>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>
+        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+      </div>
     </div>
-    <div class="chareff">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>NRG</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
-    </div>
-    <div class="chareff">
-      <table>
-        <tr>
-          <td><h1 style="font-size:4rem" style="padding:0px; margin:0px;"><b>ULTI</b></h1></td>
-          <td><h1 class="totaldie">0</h1></td>
-          <td>
-            <tr><input type="number" name="" id="" size="2">Base</tr>            
-            <tr><input type="number" name="" id="" size="2">Life Form</tr>            
-            <tr><input type="number" name="" id="" size="2">Loot</tr>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <div class="colflow" style="flex-grow: 1;">
-    <div class="charstatus" style="height:300px; border: 1px solid black">Insert Picture</div>
-    <div class="charstatus" style="height:80px; border: 1px solid black">Hearts</div>
-    <div class="charstatus">
-      <table>
-        <tr>
-          <th>Defense</th>
-          <th>Hero Coin</th>
-          <th>Dying</th>
-        </tr>
-        <tr>
-          <td style="text-align:center;"><input type="number" name="" id="" size="2"></td>
-          <td style="text-align:center;"><input type="number" name="" id="" size="2"></td>
-          <td style="text-align:center;"><input type="number" name="" id="" size="2"></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-  <div class="flexbreak"></div>
-
-  <div class="charinventory" style="flex: 1 1">
-    <table style="border: 1px solid black; margin: 0; padding: 0;">
-      <tr>
-        <th style="background-color: black;color: white;font-size: 2rem; width:400px; text-align: left;">LOOT</th>
-        <th style="vertical-align:top; width: 150px;text-align: left;">Equipped<br>Max 10</th>
-        <th style="vertical-align:top; width: 150px;text-align: left;">Carried<br>Max 10</th>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry1" id=""></td>
-        <td><input type="radio" name="carry1" id=""></td>
-        <td><input type="radio" name="carry1" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry2" id=""></td>
-        <td><input type="radio" name="carry2" id=""></td>
-        <td><input type="radio" name="carry2" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry3" id=""></td>
-        <td><input type="radio" name="carry3" id=""></td>
-        <td><input type="radio" name="carry3" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry4" id=""></td>
-        <td><input type="radio" name="carry4" id=""></td>
-        <td><input type="radio" name="carry4" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry5" id=""></td>
-        <td><input type="radio" name="carry5" id=""></td>
-        <td><input type="radio" name="carry5" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry6" id=""></td>
-        <td><input type="radio" name="carry6" id=""></td>
-        <td><input type="radio" name="carry6" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry7" id=""></td>
-        <td><input type="radio" name="carry7" id=""></td>
-        <td><input type="radio" name="carry7" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry8" id=""></td>
-        <td><input type="radio" name="carry8" id=""></td>
-        <td><input type="radio" name="carry8" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry9" id=""></td>
-        <td><input type="radio" name="carry9" id=""></td>
-        <td><input type="radio" name="carry9" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry10" id=""></td>
-        <td><input type="radio" name="carry10" id=""></td>
-        <td><input type="radio" name="carry10" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry11" id=""></td>
-        <td><input type="radio" name="carry11" id=""></td>
-        <td><input type="radio" name="carry11" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry12" id=""></td>
-        <td><input type="radio" name="carry12" id=""></td>
-        <td><input type="radio" name="carry12" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry13" id=""></td>
-        <td><input type="radio" name="carry13" id=""></td>
-        <td><input type="radio" name="carry13" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry14" id=""></td>
-        <td><input type="radio" name="carry14" id=""></td>
-        <td><input type="radio" name="carry14" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry15" id=""></td>
-        <td><input type="radio" name="carry15" id=""></td>
-        <td><input type="radio" name="carry15" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry16" id=""></td>
-        <td><input type="radio" name="carry16" id=""></td>
-        <td><input type="radio" name="carry16" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry17" id=""></td>
-        <td><input type="radio" name="carry17" id=""></td>
-        <td><input type="radio" name="carry17" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry18" id=""></td>
-        <td><input type="radio" name="carry18" id=""></td>
-        <td><input type="radio" name="carry18" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry19" id=""></td>
-        <td><input type="radio" name="carry19" id=""></td>
-        <td><input type="radio" name="carry19" id=""></td>
-      </tr>
-      <tr>
-        <td><input type="text" name="carry20" id=""></td>
-        <td><input type="radio" name="carry20" id=""></td>
-        <td><input type="radio" name="carry20" id=""></td>
-      </tr>      
-    </table>
-  </div>
-  
-  <div class="charability" style="flex: 1 1">
-    <table>
-      <tr><th>ABILITIES</th></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td>POWERS</td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td>AUGMENTS</td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-      <tr><td><input type="text" name="" id=""></td></tr>
-    </table>
-  </div>
-
-  <div class="flexbreak"></div>
-  <div class="charmastery">Bottom bar</div>
+    <div ngModelGroup="abilities">
+      <h2>Abilities/Powers/Augments</h2>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+      </div>
+      <div>
+        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+      </div>
+    </div>    
+  </form>
 </div>
-<br><br><br><br>
-<div>
-  <p id="rolldie">click a stat</p>
-  this is a test
-</div>
-<!-- <script>
-  function rollDie() {
-    let x = document.getElementById("rolldie");
-    let statCheck = document.getElementById("strtotal")
-    let rolled = Math.random() * 20 + 1
-    let totalRoll = rolled + statCheck.innerHTML
-    console.log(rolled)
-    console.log(totalRoll)
-    x.innerHTML = `You rolled a ${totalRoll}`
-  }
-</script> -->
