@@ -3,254 +3,263 @@
 </div>
 
 <div class="charsheet container">
-  <form #charSheet="ngForm" (ngSubmit)="charDetails(charSheet)">
+  <form #charSheetForm="ngForm" (ngSubmit)="onSubmit(charSheetForm)">
     <h2>Character Sheet</h2>
     <div>
-      <label for=""> Character Name: </label>
-      <input type="text" name="" ngModel>
+      <label for="charname"> Character Name: </label>
+      <input type="text" name="charname" ngModel>
     </div>
     <div>
-      <label for=""> World Name: </label>
-      <input type="text" name="" ngModel>
+      <label for="charworld"> World Name: </label>
+      <input type="text" name="charworld" ngModel>
     </div>
     <div>
-      <label for=""> Story: </label>
-      <input type="text" name="" ngModel>
+      <label for="charstory"> Story: </label>
+      <input type="text" name="charstory" ngModel>
     </div>
     <div>
-      <label for=""> Life Form: </label>
-      <input type="text" name="" ngModel>
+      <label for="charlifeform"> Life Form: </label>
+      <input type="text" name="charlifeform" ngModel>
     </div>
     <div>
-      <label for=""> Type: </label>
-      <input type="text" name="" ngModel>
+      <label for="chartype"> Type: </label>
+      <input type="text" name="chartype" ngModel>
     </div>
     <div>
       <h2>Status</h2>    
       <div>
-        <label for=""> HP: </label>
-        <input type="number" name="" ngModel>
+        <label for="charhp"> HP: </label>
+        <input type="number" name="charhp" ngModel>
       </div>
       <div>
-        <label for=""> Defense: </label>
-        <input type="number" name="" ngModel>
+        <label for="chardef"> Defense: </label>
+        <input type="number" name="chardef" ngModel>
       </div>
       <div>
-        <label for=""> Gold: </label>
-        <input type="number" name="" ngModel>
+        <label for="chargold"> Gold: </label>
+        <input type="number" name="chargold" ngModel>
       </div>
       <div>
-        <label for=""> Death Timer: </label>
-        <input type="number" name="" ngModel>
+        <label for="chardeath"> Death Timer: </label>
+        <input type="number" name="chardeath" ngModel>
       </div>
       <div>
-        <label for=""> Hero Coin: </label>
-        <input type="checkbox" name="" ngModel>
+        <label for="charhero"> Hero Coin: </label>
+        <input type="checkbox" name="charhero" ngModel>
       </div>
     </div>
-    <div>
+    <div ngModelGroup="charstats">
       <h2>Stats</h2>    
       <div>
         <h3>Strength</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>
+        Total: <span class="strtotal">{{strbase.value + strlife.value + strability.value + strloot.value}}</span><br>
+        <label for="strbase">Base: <input type="number" name="strbase" #strbase="ngModel" ngModel></label><br>
+        <label for="strlife">Life Form: <input type="number" name="strlife" #strlife="ngModel" ngModel></label><br>
+        <label for="strability">Ability: <input type="number" name="strability" #strability="ngModel" ngModel></label><br>
+        <label for="strloot">Loot: <input type="number" name="strloot" #strloot="ngModel" ngModel></label><br>
       </div>
       <div>
         <h3>Dexterity</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>
+        Total: <span class="dextotal">{{dexbase.value + dexlife.value + dexability.value + dexloot.value}}</span><br>
+        <label for="dexbase">Base: <input type="number" name="dexbase" #dexbase="ngModel" ngModel></label><br>
+        <label for="dexlife">Life Form: <input type="number" name="dexlife" #dexlife="ngModel" ngModel></label><br>
+        <label for="dexability">Ability: <input type="number" name="dexability" #dexability="ngModel" ngModel></label><br>
+        <label for="dexloot">Loot: <input type="number" name="dexloot" #dexloot="ngModel" ngModel></label><br>
       </div>
       <div>
         <h3>Constitution</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="constotal">{{conbase.value + conlife.value + conability.value + conloot.value}}</span><br>
+        <label for="conbase">Base: <input type="number" name="conbase" #conbase="ngModel" ngModel></label><br>
+        <label for="conlife">Life Form: <input type="number" name="conlife" #conlife="ngModel" ngModel></label><br>
+        <label for="conability">Ability: <input type="number" name="conability" #conability="ngModel" ngModel></label><br>
+        <label for="conloot">Loot: <input type="number" name="conloot" #conloot="ngModel" ngModel></label><br>      
       </div>
       <div>
         <h3>Intelligence</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="inttotal">{{intbase.value + intlife.value + intability.value + intloot.value}}</span><br>
+        <label for="intbase">Base: <input type="number" name="intbase" #intbase="ngModel" ngModel></label><br>
+        <label for="intlife">Life Form: <input type="number" name="intlife" #intlife="ngModel" ngModel></label><br>
+        <label for="intability">Ability: <input type="number" name="intability" #intability="ngModel" ngModel></label><br>
+        <label for="intloot">Loot: <input type="number" name="intloot" #intloot="ngModel" ngModel></label><br>      
       </div>
       <div>
         <h3>Wisdom</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="wistotal">{{wisbase.value + wislife.value + wisability.value + wisloot.value}}</span><br>
+        <label for="wisbase">Base: <input type="number" name="wisbase" #wisbase="ngModel" ngModel></label><br>
+        <label for="wislife">Life Form: <input type="number" name="wislife" #wislife="ngModel" ngModel></label><br>
+        <label for="wisability">Ability: <input type="number" name="wisability" #wisability="ngModel" ngModel></label><br>
+        <label for="wisloot">Loot: <input type="number" name="wisloot" #wisloot="ngModel" ngModel></label><br>      
       </div>
       <div>
         <h3>Charisma</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="chatotal">{{chabase.value + chalife.value + chaability.value + chaloot.value}}</span><br>
+        <label for="chabase">Base: <input type="number" name="chabase" #chabase="ngModel" ngModel></label><br>
+        <label for="chalife">Life Form: <input type="number" name="chalife" #chalife="ngModel" ngModel></label><br>
+        <label for="chaability">Ability: <input type="number" name="chaability" #chaability="ngModel" ngModel></label><br>
+        <label for="chaloot">Loot: <input type="number" name="chaloot" #chaloot="ngModel" ngModel></label><br>      
       </div>
     </div>
-    <div>
+    <div ngModelGroup="charefforts">
       <h2>Effort</h2>
       <div>
         <h3>Basic</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="basictotal">0</span><br>
+        <label for="basicbase">Base: <input type="number" name="basicbase" [(ngModel)]="charform.charefforts.basicbase"></label><br>
+        <label for="basiclife">Life Form: <input type="number" name="basiclife" ngModel></label><br>
+        <label for="basicability">Ability: <input type="number" name="basicability" ngModel></label><br>
+        <label for="basicloot">Loot: <input type="number" name="basicloot" ngModel></label><br>      
       </div>
       <div>
         <h3>Weapons & Tools</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="tooltotal">0</span><br>
+        <label for="tootbase">Base: <input type="number" name="toolbase" ngModel></label><br>
+        <label for="toollife">Life Form: <input type="number" name="toollife" ngModel></label><br>
+        <label for="tollability">Ability: <input type="number" name="toolability" ngModel></label><br>
+        <label for="tolloot">Loot: <input type="number" name="toolloot" ngModel></label><br>      
       </div>
       <div>
         <h3>Guns</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="guntotal">0</span><br>
+        <label for="gunbase">Base: <input type="number" name="gunbase" ngModel></label><br>
+        <label for="gunlife">Life Form: <input type="number" name="gunlife" ngModel></label><br>
+        <label for="gunability">Ability: <input type="number" name="gunability" ngModel></label><br>
+        <label for="gunloot">Loot: <input type="number" name="gunloot" ngModel></label><br>      
       </div>
       <div>
         <h3>Energy & Magic</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="magictotal">0</span><br>
+        <label for="magicbase">Base: <input type="number" name="magicbase" ngModel></label><br>
+        <label for="magiclife">Life Form: <input type="number" name="magiclife" ngModel></label><br>
+        <label for="magicability">Ability: <input type="number" name="magicability" ngModel></label><br>
+        <label for="magicloot">Loot: <input type="number" name="magicloot" ngModel></label><br>      
       </div>
       <div>
         <h3>Ultimate</h3>
-        Total: <span>0</span><br>
-        <label for="">Base: <input type="number" name="" ngModel></label><br>
-        <label for="">Life Form: <input type="number" name="" ngModel></label><br>
-        <label for="">Ability: <input type="number" name="" ngModel></label><br>
-        <label for="">Loot: <input type="number" name="" ngModel></label><br>      
+        Total: <span class="ultitotal">0</span><br>
+        <label for="ultibase">Base: <input type="number" name="ultibase" ngModel></label><br>
+        <label for="ultilife">Life Form: <input type="number" name="ultilife" ngModel></label><br>
+        <label for="ultiability">Ability: <input type="number" name="ultiability" ngModel></label><br>
+        <label for="ultiloot">Loot: <input type="number" name="ultiloot" ngModel></label><br>      
       </div>
     </div>
-    <div ngModelGroup="equipment">
+    <div ngModelGroup="charequipment">
       <h2>Equipment</h2>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip01">Name, Description: </label><input type="text" name="equip01" ngModel>
+        <label for="equip01"> Equipped? </label><input type="checkbox" name="isequip01" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip02">Name, Description: </label><input type="text" name="equip02" ngModel>
+        <label for="equip02"> Equipped? </label><input type="checkbox" name="isequip02" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip03">Name, Description: </label><input type="text" name="equip03" ngModel>
+        <label for="equip03"> Equipped? </label><input type="checkbox" name="isequip03" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip04">Name, Description: </label><input type="text" name="equip04" ngModel>
+        <label for="equip04"> Equipped? </label><input type="checkbox" name="isequip04" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip05">Name, Description: </label><input type="text" name="equip05" ngModel>
+        <label for="equip05"> Equipped? </label><input type="checkbox" name="isequip05" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip06">Name, Description: </label><input type="text" name="equip06" ngModel>
+        <label for="equip06"> Equipped? </label><input type="checkbox" name="isequip06" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip07">Name, Description: </label><input type="text" name="equip07" ngModel>
+        <label for="equip07"> Equipped? </label><input type="checkbox" name="isequip07" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip08">Name, Description: </label><input type="text" name="equip08" ngModel>
+        <label for="equip08"> Equipped? </label><input type="checkbox" name="isequip08" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip09">Name, Description: </label><input type="text" name="equip09" ngModel>
+        <label for="equip09"> Equipped? </label><input type="checkbox" name="isequip09" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip10">Name, Description: </label><input type="text" name="equip10" ngModel>
+        <label for="equip10"> Equipped? </label><input type="checkbox" name="isequip10" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip11">Name, Description: </label><input type="text" name="equip11" ngModel>
+        <label for="equip11"> Equipped? </label><input type="checkbox" name="isequip11" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip12">Name, Description: </label><input type="text" name="equip12" ngModel>
+        <label for="equip12"> Equipped? </label><input type="checkbox" name="isequip12" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip13">Name, Description: </label><input type="text" name="equip13" ngModel>
+        <label for="equip13"> Equipped? </label><input type="checkbox" name="isequip13" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip14">Name, Description: </label><input type="text" name="equip14" ngModel>
+        <label for="equip14"> Equipped? </label><input type="checkbox" name="isequip14" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip15">Name, Description: </label><input type="text" name="equip15" ngModel>
+        <label for="equip15"> Equipped? </label><input type="checkbox" name="isequip15" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip16">Name, Description: </label><input type="text" name="equip16" ngModel>
+        <label for="equip16"> Equipped? </label><input type="checkbox" name="isequip16" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip17">Name, Description: </label><input type="text" name="equip17" ngModel>
+        <label for="equip17"> Equipped? </label><input type="checkbox" name="isequip17" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip18">Name, Description: </label><input type="text" name="equip18" ngModel>
+        <label for="equip18"> Equipped? </label><input type="checkbox" name="isequip18" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip19">Name, Description: </label><input type="text" name="equip19" ngModel>
+        <label for="equip19"> Equipped? </label><input type="checkbox" name="isequip19" ngModel>
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>
-        <label for=""> Equipped? </label><input type="checkbox" name="" ngModel>
+        <label for="equip20">Name, Description: </label><input type="text" name="equip20" ngModel>
+        <label for="equip20"> Equipped? </label><input type="checkbox" name="isequip20" ngModel>
       </div>
     </div>
-    <div ngModelGroup="abilities">
+    <div ngModelGroup="charabilities">
       <h2>Abilities/Powers/Augments</h2>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+        <label for="ability01">Name, Description: </label><input type="text" name="ability01" ngModel>      
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+        <label for="ability02">Name, Description: </label><input type="text" name="ability02" ngModel>      
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+        <label for="ability03">Name, Description: </label><input type="text" name="ability03" ngModel>      
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+        <label for="ability04">Name, Description: </label><input type="text" name="ability04" ngModel>      
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+        <label for="ability05">Name, Description: </label><input type="text" name="ability05" ngModel>      
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+        <label for="ability06">Name, Description: </label><input type="text" name="ability06" ngModel>      
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+        <label for="ability07">Name, Description: </label><input type="text" name="ability07" ngModel>      
       </div>
       <div>
-        <label for="">Name, Description: </label><input type="text" name="" ngModel>      
+        <label for="ability08">Name, Description: </label><input type="text" name="ability08" ngModel>      
+      </div>
+      <div>
+        <label for="ability09">Name, Description: </label><input type="text" name="ability09" ngModel>      
+      </div>
+      <div>
+        <label for="ability10">Name, Description: </label><input type="text" name="ability10" ngModel>      
       </div>
     </div>    
+    <p><button type="button" (click)="reset(charSheetForm)">Reset</button></p>
+    <p><button type="submit">Submit</button></p>
   </form>
 </div>
+{{charSheetForm.value | json}}
