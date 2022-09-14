@@ -111,7 +111,7 @@
       </div>
       <div>
         <h3>Weapons & Tools</h3>
-        Total: <span class="tooltotal">0</span><br>
+        Total: <span class="tooltotal">{{charform.charefforts.toolbase + charform.charefforts.toollife + charform.charefforts.toolability + charform.charefforts.toolloot}}</span><br>
         <label for="tootbase">Base: <input type="number" name="toolbase" [(ngModel)]="charform.charefforts.toolbase"></label><br>
         <label for="toollife">Life Form: <input type="number" name="toollife" [(ngModel)]="charform.charefforts.toollife"></label><br>
         <label for="tollability">Ability: <input type="number" name="toolability" [(ngModel)]="charform.charefforts.toolability"></label><br>
@@ -119,7 +119,7 @@
       </div>
       <div>
         <h3>Guns</h3>
-        Total: <span class="guntotal">0</span><br>
+        Total: <span class="guntotal">{{charform.charefforts.gunbase + charform.charefforts.gunlife + charform.charefforts.gunability + charform.charefforts.gunloot}}</span><br>
         <label for="gunbase">Base: <input type="number" name="gunbase" [(ngModel)]="charform.charefforts.gunbase"></label><br>
         <label for="gunlife">Life Form: <input type="number" name="gunlife" [(ngModel)]="charform.charefforts.gunlife"></label><br>
         <label for="gunability">Ability: <input type="number" name="gunability" [(ngModel)]="charform.charefforts.gunability"></label><br>
@@ -127,7 +127,7 @@
       </div>
       <div>
         <h3>Energy & Magic</h3>
-        Total: <span class="magictotal">0</span><br>
+        Total: <span class="magictotal">{{charform.charefforts.magicbase + charform.charefforts.magiclife + charform.charefforts.magicability + charform.charefforts.magicloot}}</span><br>
         <label for="magicbase">Base: <input type="number" name="magicbase" [(ngModel)]="charform.charefforts.magicbase"></label><br>
         <label for="magiclife">Life Form: <input type="number" name="magiclife" [(ngModel)]="charform.charefforts.magiclife"></label><br>
         <label for="magicability">Ability: <input type="number" name="magicability" [(ngModel)]="charform.charefforts.magicability"></label><br>
@@ -135,7 +135,7 @@
       </div>
       <div>
         <h3>Ultimate</h3>
-        Total: <span class="ultitotal">0</span><br>
+        Total: <span class="ultitotal">{{charform.charefforts.ultibase + charform.charefforts.ultilife + charform.charefforts.ultiability + charform.charefforts.ultiloot}}</span><br>
         <label for="ultibase">Base: <input type="number" name="ultibase" [(ngModel)]="charform.charefforts.ultibase"></label><br>
         <label for="ultilife">Life Form: <input type="number" name="ultilife" [(ngModel)]="charform.charefforts.ultilife"></label><br>
         <label for="ultiability">Ability: <input type="number" name="ultiability" [(ngModel)]="charform.charefforts.ultiability"></label><br>

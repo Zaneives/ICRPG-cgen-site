@@ -9,6 +9,7 @@ import { NgForm } from '@angular/forms';
 export class CharsheetComponent implements OnInit {
 
   public charform = new CharSheet()
+  // charform!:CharSheet;
 
   onSubmit(sheetupdate:any): void {
     console.log(sheetupdate.value);
