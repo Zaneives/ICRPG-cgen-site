@@ -7,255 +7,255 @@
     <h2>Character Sheet</h2>
     <div>
       <label for="charname"> Character Name: </label>
-      <input type="text" name="charname" ngModel>
+      <input type="text" name="charname" [(ngModel)]="charform.charname">
     </div>
     <div>
       <label for="charworld"> World Name: </label>
-      <input type="text" name="charworld" ngModel>
+      <input type="text" name="charworld" [(ngModel)]="charform.charworld">
     </div>
     <div>
       <label for="charstory"> Story: </label>
-      <input type="text" name="charstory" ngModel>
+      <input type="text" name="charstory" [(ngModel)]="charform.charstory">
     </div>
     <div>
       <label for="charlifeform"> Life Form: </label>
-      <input type="text" name="charlifeform" ngModel>
+      <input type="text" name="charlifeform" [(ngModel)]="charform.charlifeform">
     </div>
     <div>
       <label for="chartype"> Type: </label>
-      <input type="text" name="chartype" ngModel>
+      <input type="text" name="chartype" [(ngModel)]="charform.chartype">
     </div>
     <div>
       <h2>Status</h2>    
       <div>
         <label for="charhp"> HP: </label>
-        <input type="number" name="charhp" ngModel>
+        <input type="number" name="charhp" [(ngModel)]="charform.charhp">
       </div>
       <div>
         <label for="chardef"> Defense: </label>
-        <input type="number" name="chardef" ngModel>
+        <input type="number" name="chardef" [(ngModel)]="charform.chardef">
       </div>
       <div>
         <label for="chargold"> Gold: </label>
-        <input type="number" name="chargold" ngModel>
+        <input type="number" name="chargold" [(ngModel)]="charform.chargold">
       </div>
       <div>
         <label for="chardeath"> Death Timer: </label>
-        <input type="number" name="chardeath" ngModel>
+        <input type="number" name="chardeath" [(ngModel)]="charform.chardeath">
       </div>
       <div>
         <label for="charhero"> Hero Coin: </label>
-        <input type="checkbox" name="charhero" ngModel>
+        <input type="checkbox" name="charhero" [(ngModel)]="charform.charhero">
       </div>
     </div>
     <div ngModelGroup="charstats">
       <h2>Stats</h2>    
       <div>
         <h3>Strength</h3>
-        Total: <span class="strtotal">{{strbase.value + strlife.value + strability.value + strloot.value}}</span><br>
-        <label for="strbase">Base: <input type="number" name="strbase" #strbase="ngModel" ngModel></label><br>
-        <label for="strlife">Life Form: <input type="number" name="strlife" #strlife="ngModel" ngModel></label><br>
-        <label for="strability">Ability: <input type="number" name="strability" #strability="ngModel" ngModel></label><br>
-        <label for="strloot">Loot: <input type="number" name="strloot" #strloot="ngModel" ngModel></label><br>
+        Total: <span class="strtotal">{{charform.charstats.strbase + charform.charstats.strlife + charform.charstats.strability + charform.charstats.strloot}}</span><br>
+        <label for="strbase">Base: <input type="number" name="strbase" [(ngModel)]="charform.charstats.strbase"></label><br>
+        <label for="strlife">Life Form: <input type="number" name="strlife" [(ngModel)]="charform.charstats.strlife"></label><br>
+        <label for="strability">Ability: <input type="number" name="strability" [(ngModel)]="charform.charstats.strability"></label><br>
+        <label for="strloot">Loot: <input type="number" name="strloot" [(ngModel)]="charform.charstats.strloot"></label><br>
       </div>
       <div>
         <h3>Dexterity</h3>
-        Total: <span class="dextotal">{{dexbase.value + dexlife.value + dexability.value + dexloot.value}}</span><br>
-        <label for="dexbase">Base: <input type="number" name="dexbase" #dexbase="ngModel" ngModel></label><br>
-        <label for="dexlife">Life Form: <input type="number" name="dexlife" #dexlife="ngModel" ngModel></label><br>
-        <label for="dexability">Ability: <input type="number" name="dexability" #dexability="ngModel" ngModel></label><br>
-        <label for="dexloot">Loot: <input type="number" name="dexloot" #dexloot="ngModel" ngModel></label><br>
+        Total: <span class="dextotal">{{charform.charstats.dexbase + charform.charstats.dexlife + charform.charstats.dexability + charform.charstats.dexloot}}</span><br>
+        <label for="dexbase">Base: <input type="number" name="dexbase" [(ngModel)]="charform.charstats.dexbase"></label><br>
+        <label for="dexlife">Life Form: <input type="number" name="dexlife" [(ngModel)]="charform.charstats.dexlife"></label><br>
+        <label for="dexability">Ability: <input type="number" name="dexability" [(ngModel)]="charform.charstats.dexability"></label><br>
+        <label for="dexloot">Loot: <input type="number" name="dexloot" [(ngModel)]="charform.charstats.dexloot"></label><br>
       </div>
       <div>
         <h3>Constitution</h3>
-        Total: <span class="constotal">{{conbase.value + conlife.value + conability.value + conloot.value}}</span><br>
-        <label for="conbase">Base: <input type="number" name="conbase" #conbase="ngModel" ngModel></label><br>
-        <label for="conlife">Life Form: <input type="number" name="conlife" #conlife="ngModel" ngModel></label><br>
-        <label for="conability">Ability: <input type="number" name="conability" #conability="ngModel" ngModel></label><br>
-        <label for="conloot">Loot: <input type="number" name="conloot" #conloot="ngModel" ngModel></label><br>      
+        Total: <span class="constotal">{{charform.charstats.conbase + charform.charstats.conlife + charform.charstats.conability + charform.charstats.conloot}}</span><br>
+        <label for="conbase">Base: <input type="number" name="conbase" [(ngModel)]="charform.charstats.conbase"></label><br>
+        <label for="conlife">Life Form: <input type="number" name="conlife" [(ngModel)]="charform.charstats.conlife"></label><br>
+        <label for="conability">Ability: <input type="number" name="conability" [(ngModel)]="charform.charstats.conability"></label><br>
+        <label for="conloot">Loot: <input type="number" name="conloot" [(ngModel)]="charform.charstats.conloot"></label><br>      
       </div>
       <div>
         <h3>Intelligence</h3>
-        Total: <span class="inttotal">{{intbase.value + intlife.value + intability.value + intloot.value}}</span><br>
-        <label for="intbase">Base: <input type="number" name="intbase" #intbase="ngModel" ngModel></label><br>
-        <label for="intlife">Life Form: <input type="number" name="intlife" #intlife="ngModel" ngModel></label><br>
-        <label for="intability">Ability: <input type="number" name="intability" #intability="ngModel" ngModel></label><br>
-        <label for="intloot">Loot: <input type="number" name="intloot" #intloot="ngModel" ngModel></label><br>      
+        Total: <span class="inttotal">{{charform.charstats.intbase + charform.charstats.intlife + charform.charstats.intability + charform.charstats.intloot}}</span><br>
+        <label for="intbase">Base: <input type="number" name="intbase" [(ngModel)]="charform.charstats.intbase"></label><br>
+        <label for="intlife">Life Form: <input type="number" name="intlife" [(ngModel)]="charform.charstats.intlife"></label><br>
+        <label for="intability">Ability: <input type="number" name="intability" [(ngModel)]="charform.charstats.intability"></label><br>
+        <label for="intloot">Loot: <input type="number" name="intloot" [(ngModel)]="charform.charstats.intloot"></label><br>      
       </div>
       <div>
         <h3>Wisdom</h3>
-        Total: <span class="wistotal">{{wisbase.value + wislife.value + wisability.value + wisloot.value}}</span><br>
-        <label for="wisbase">Base: <input type="number" name="wisbase" #wisbase="ngModel" ngModel></label><br>
-        <label for="wislife">Life Form: <input type="number" name="wislife" #wislife="ngModel" ngModel></label><br>
-        <label for="wisability">Ability: <input type="number" name="wisability" #wisability="ngModel" ngModel></label><br>
-        <label for="wisloot">Loot: <input type="number" name="wisloot" #wisloot="ngModel" ngModel></label><br>      
+        Total: <span class="wistotal">{{charform.charstats.wisbase + charform.charstats.wislife + charform.charstats.wisability + charform.charstats.wisloot}}</span><br>
+        <label for="wisbase">Base: <input type="number" name="wisbase" [(ngModel)]="charform.charstats.wisbase"></label><br>
+        <label for="wislife">Life Form: <input type="number" name="wislife" [(ngModel)]="charform.charstats.wislife"></label><br>
+        <label for="wisability">Ability: <input type="number" name="wisability" [(ngModel)]="charform.charstats.wisability"></label><br>
+        <label for="wisloot">Loot: <input type="number" name="wisloot" [(ngModel)]="charform.charstats.wisloot"></label><br>      
       </div>
       <div>
         <h3>Charisma</h3>
-        Total: <span class="chatotal">{{chabase.value + chalife.value + chaability.value + chaloot.value}}</span><br>
-        <label for="chabase">Base: <input type="number" name="chabase" #chabase="ngModel" ngModel></label><br>
-        <label for="chalife">Life Form: <input type="number" name="chalife" #chalife="ngModel" ngModel></label><br>
-        <label for="chaability">Ability: <input type="number" name="chaability" #chaability="ngModel" ngModel></label><br>
-        <label for="chaloot">Loot: <input type="number" name="chaloot" #chaloot="ngModel" ngModel></label><br>      
+        Total: <span class="chatotal">{{charform.charstats.chabase + charform.charstats.chalife + charform.charstats.chaability + charform.charstats.chaloot}}</span><br>
+        <label for="chabase">Base: <input type="number" name="chabase" [(ngModel)]="charform.charstats.chabase"></label><br>
+        <label for="chalife">Life Form: <input type="number" name="chalife" [(ngModel)]="charform.charstats.chalife"></label><br>
+        <label for="chaability">Ability: <input type="number" name="chaability" [(ngModel)]="charform.charstats.chaability"></label><br>
+        <label for="chaloot">Loot: <input type="number" name="chaloot" [(ngModel)]="charform.charstats.chaloot"></label><br>      
       </div>
     </div>
     <div ngModelGroup="charefforts">
       <h2>Effort</h2>
       <div>
         <h3>Basic</h3>
-        Total: <span class="basictotal">0</span><br>
+        Total: <span class="basictotal">{{charform.charefforts.basicbase + charform.charefforts.basiclife + charform.charefforts.basicability + charform.charefforts.basicloot}}</span><br>
         <label for="basicbase">Base: <input type="number" name="basicbase" [(ngModel)]="charform.charefforts.basicbase"></label><br>
-        <label for="basiclife">Life Form: <input type="number" name="basiclife" ngModel></label><br>
-        <label for="basicability">Ability: <input type="number" name="basicability" ngModel></label><br>
-        <label for="basicloot">Loot: <input type="number" name="basicloot" ngModel></label><br>      
+        <label for="basiclife">Life Form: <input type="number" name="basiclife" [(ngModel)]="charform.charefforts.basiclife"></label><br>
+        <label for="basicability">Ability: <input type="number" name="basicability" [(ngModel)]="charform.charefforts.basicability"></label><br>
+        <label for="basicloot">Loot: <input type="number" name="basicloot" [(ngModel)]="charform.charefforts.basicloot"></label><br>      
       </div>
       <div>
         <h3>Weapons & Tools</h3>
         Total: <span class="tooltotal">0</span><br>
-        <label for="tootbase">Base: <input type="number" name="toolbase" ngModel></label><br>
-        <label for="toollife">Life Form: <input type="number" name="toollife" ngModel></label><br>
-        <label for="tollability">Ability: <input type="number" name="toolability" ngModel></label><br>
-        <label for="tolloot">Loot: <input type="number" name="toolloot" ngModel></label><br>      
+        <label for="tootbase">Base: <input type="number" name="toolbase" [(ngModel)]="charform.charefforts.toolbase"></label><br>
+        <label for="toollife">Life Form: <input type="number" name="toollife" [(ngModel)]="charform.charefforts.toollife"></label><br>
+        <label for="tollability">Ability: <input type="number" name="toolability" [(ngModel)]="charform.charefforts.toolability"></label><br>
+        <label for="tolloot">Loot: <input type="number" name="toolloot" [(ngModel)]="charform.charefforts.toolloot"></label><br>      
       </div>
       <div>
         <h3>Guns</h3>
         Total: <span class="guntotal">0</span><br>
-        <label for="gunbase">Base: <input type="number" name="gunbase" ngModel></label><br>
-        <label for="gunlife">Life Form: <input type="number" name="gunlife" ngModel></label><br>
-        <label for="gunability">Ability: <input type="number" name="gunability" ngModel></label><br>
-        <label for="gunloot">Loot: <input type="number" name="gunloot" ngModel></label><br>      
+        <label for="gunbase">Base: <input type="number" name="gunbase" [(ngModel)]="charform.charefforts.gunbase"></label><br>
+        <label for="gunlife">Life Form: <input type="number" name="gunlife" [(ngModel)]="charform.charefforts.gunlife"></label><br>
+        <label for="gunability">Ability: <input type="number" name="gunability" [(ngModel)]="charform.charefforts.gunability"></label><br>
+        <label for="gunloot">Loot: <input type="number" name="gunloot" [(ngModel)]="charform.charefforts.gunloot"></label><br>      
       </div>
       <div>
         <h3>Energy & Magic</h3>
         Total: <span class="magictotal">0</span><br>
-        <label for="magicbase">Base: <input type="number" name="magicbase" ngModel></label><br>
-        <label for="magiclife">Life Form: <input type="number" name="magiclife" ngModel></label><br>
-        <label for="magicability">Ability: <input type="number" name="magicability" ngModel></label><br>
-        <label for="magicloot">Loot: <input type="number" name="magicloot" ngModel></label><br>      
+        <label for="magicbase">Base: <input type="number" name="magicbase" [(ngModel)]="charform.charefforts.magicbase"></label><br>
+        <label for="magiclife">Life Form: <input type="number" name="magiclife" [(ngModel)]="charform.charefforts.magiclife"></label><br>
+        <label for="magicability">Ability: <input type="number" name="magicability" [(ngModel)]="charform.charefforts.magicability"></label><br>
+        <label for="magicloot">Loot: <input type="number" name="magicloot" [(ngModel)]="charform.charefforts.magicloot"></label><br>      
       </div>
       <div>
         <h3>Ultimate</h3>
         Total: <span class="ultitotal">0</span><br>
-        <label for="ultibase">Base: <input type="number" name="ultibase" ngModel></label><br>
-        <label for="ultilife">Life Form: <input type="number" name="ultilife" ngModel></label><br>
-        <label for="ultiability">Ability: <input type="number" name="ultiability" ngModel></label><br>
-        <label for="ultiloot">Loot: <input type="number" name="ultiloot" ngModel></label><br>      
+        <label for="ultibase">Base: <input type="number" name="ultibase" [(ngModel)]="charform.charefforts.ultibase"></label><br>
+        <label for="ultilife">Life Form: <input type="number" name="ultilife" [(ngModel)]="charform.charefforts.ultilife"></label><br>
+        <label for="ultiability">Ability: <input type="number" name="ultiability" [(ngModel)]="charform.charefforts.ultiability"></label><br>
+        <label for="ultiloot">Loot: <input type="number" name="ultiloot" [(ngModel)]="charform.charefforts.ultiloot"></label><br>      
       </div>
     </div>
     <div ngModelGroup="charequipment">
       <h2>Equipment</h2>
       <div>
-        <label for="equip01">Name, Description: </label><input type="text" name="equip01" ngModel>
-        <label for="equip01"> Equipped? </label><input type="checkbox" name="isequip01" ngModel>
+        <label for="equip01">Name, Description: </label><input type="text" name="equip01" [(ngModel)]="charform.charequipment.equip01">
+        <label for="equip01"> Equipped? </label><input type="checkbox" name="isequip01" [(ngModel)]="charform.charequipment.isequip01">
       </div>
       <div>
-        <label for="equip02">Name, Description: </label><input type="text" name="equip02" ngModel>
-        <label for="equip02"> Equipped? </label><input type="checkbox" name="isequip02" ngModel>
+        <label for="equip02">Name, Description: </label><input type="text" name="equip02" [(ngModel)]="charform.charequipment.equip02">
+        <label for="equip02"> Equipped? </label><input type="checkbox" name="isequip02" [(ngModel)]="charform.charequipment.isequip02">
       </div>
       <div>
-        <label for="equip03">Name, Description: </label><input type="text" name="equip03" ngModel>
-        <label for="equip03"> Equipped? </label><input type="checkbox" name="isequip03" ngModel>
+        <label for="equip03">Name, Description: </label><input type="text" name="equip03" [(ngModel)]="charform.charequipment.equip03">
+        <label for="equip03"> Equipped? </label><input type="checkbox" name="isequip03" [(ngModel)]="charform.charequipment.isequip03">
       </div>
       <div>
-        <label for="equip04">Name, Description: </label><input type="text" name="equip04" ngModel>
-        <label for="equip04"> Equipped? </label><input type="checkbox" name="isequip04" ngModel>
+        <label for="equip04">Name, Description: </label><input type="text" name="equip04" [(ngModel)]="charform.charequipment.equip04">
+        <label for="equip04"> Equipped? </label><input type="checkbox" name="isequip04" [(ngModel)]="charform.charequipment.isequip04">
       </div>
       <div>
-        <label for="equip05">Name, Description: </label><input type="text" name="equip05" ngModel>
-        <label for="equip05"> Equipped? </label><input type="checkbox" name="isequip05" ngModel>
+        <label for="equip05">Name, Description: </label><input type="text" name="equip05" [(ngModel)]="charform.charequipment.equip05">
+        <label for="equip05"> Equipped? </label><input type="checkbox" name="isequip05" [(ngModel)]="charform.charequipment.isequip05">
       </div>
       <div>
-        <label for="equip06">Name, Description: </label><input type="text" name="equip06" ngModel>
-        <label for="equip06"> Equipped? </label><input type="checkbox" name="isequip06" ngModel>
+        <label for="equip06">Name, Description: </label><input type="text" name="equip06" [(ngModel)]="charform.charequipment.equip06">
+        <label for="equip06"> Equipped? </label><input type="checkbox" name="isequip06" [(ngModel)]="charform.charequipment.isequip06">
       </div>
       <div>
-        <label for="equip07">Name, Description: </label><input type="text" name="equip07" ngModel>
-        <label for="equip07"> Equipped? </label><input type="checkbox" name="isequip07" ngModel>
+        <label for="equip07">Name, Description: </label><input type="text" name="equip07" [(ngModel)]="charform.charequipment.equip07">
+        <label for="equip07"> Equipped? </label><input type="checkbox" name="isequip07" [(ngModel)]="charform.charequipment.isequip07">
       </div>
       <div>
-        <label for="equip08">Name, Description: </label><input type="text" name="equip08" ngModel>
-        <label for="equip08"> Equipped? </label><input type="checkbox" name="isequip08" ngModel>
+        <label for="equip08">Name, Description: </label><input type="text" name="equip08" [(ngModel)]="charform.charequipment.equip08">
+        <label for="equip08"> Equipped? </label><input type="checkbox" name="isequip08" [(ngModel)]="charform.charequipment.isequip08">
       </div>
       <div>
-        <label for="equip09">Name, Description: </label><input type="text" name="equip09" ngModel>
-        <label for="equip09"> Equipped? </label><input type="checkbox" name="isequip09" ngModel>
+        <label for="equip09">Name, Description: </label><input type="text" name="equip09" [(ngModel)]="charform.charequipment.equip09">
+        <label for="equip09"> Equipped? </label><input type="checkbox" name="isequip09" [(ngModel)]="charform.charequipment.isequip09">
       </div>
       <div>
-        <label for="equip10">Name, Description: </label><input type="text" name="equip10" ngModel>
-        <label for="equip10"> Equipped? </label><input type="checkbox" name="isequip10" ngModel>
+        <label for="equip10">Name, Description: </label><input type="text" name="equip10" [(ngModel)]="charform.charequipment.equip10">
+        <label for="equip10"> Equipped? </label><input type="checkbox" name="isequip10" [(ngModel)]="charform.charequipment.isequip10">
       </div>
       <div>
-        <label for="equip11">Name, Description: </label><input type="text" name="equip11" ngModel>
-        <label for="equip11"> Equipped? </label><input type="checkbox" name="isequip11" ngModel>
+        <label for="equip11">Name, Description: </label><input type="text" name="equip11" [(ngModel)]="charform.charequipment.equip11">
+        <label for="equip11"> Equipped? </label><input type="checkbox" name="isequip11" [(ngModel)]="charform.charequipment.isequip11">
       </div>
       <div>
-        <label for="equip12">Name, Description: </label><input type="text" name="equip12" ngModel>
-        <label for="equip12"> Equipped? </label><input type="checkbox" name="isequip12" ngModel>
+        <label for="equip12">Name, Description: </label><input type="text" name="equip12" [(ngModel)]="charform.charequipment.equip12">
+        <label for="equip12"> Equipped? </label><input type="checkbox" name="isequip12" [(ngModel)]="charform.charequipment.isequip12">
       </div>
       <div>
-        <label for="equip13">Name, Description: </label><input type="text" name="equip13" ngModel>
-        <label for="equip13"> Equipped? </label><input type="checkbox" name="isequip13" ngModel>
+        <label for="equip13">Name, Description: </label><input type="text" name="equip13" [(ngModel)]="charform.charequipment.equip13">
+        <label for="equip13"> Equipped? </label><input type="checkbox" name="isequip13" [(ngModel)]="charform.charequipment.isequip13">
       </div>
       <div>
-        <label for="equip14">Name, Description: </label><input type="text" name="equip14" ngModel>
-        <label for="equip14"> Equipped? </label><input type="checkbox" name="isequip14" ngModel>
+        <label for="equip14">Name, Description: </label><input type="text" name="equip14" [(ngModel)]="charform.charequipment.equip14">
+        <label for="equip14"> Equipped? </label><input type="checkbox" name="isequip14" [(ngModel)]="charform.charequipment.isequip14">
       </div>
       <div>
-        <label for="equip15">Name, Description: </label><input type="text" name="equip15" ngModel>
-        <label for="equip15"> Equipped? </label><input type="checkbox" name="isequip15" ngModel>
+        <label for="equip15">Name, Description: </label><input type="text" name="equip15" [(ngModel)]="charform.charequipment.equip15">
+        <label for="equip15"> Equipped? </label><input type="checkbox" name="isequip15" [(ngModel)]="charform.charequipment.isequip15">
       </div>
       <div>
-        <label for="equip16">Name, Description: </label><input type="text" name="equip16" ngModel>
-        <label for="equip16"> Equipped? </label><input type="checkbox" name="isequip16" ngModel>
+        <label for="equip16">Name, Description: </label><input type="text" name="equip16" [(ngModel)]="charform.charequipment.equip16">
+        <label for="equip16"> Equipped? </label><input type="checkbox" name="isequip16" [(ngModel)]="charform.charequipment.isequip16">
       </div>
       <div>
-        <label for="equip17">Name, Description: </label><input type="text" name="equip17" ngModel>
-        <label for="equip17"> Equipped? </label><input type="checkbox" name="isequip17" ngModel>
+        <label for="equip17">Name, Description: </label><input type="text" name="equip17" [(ngModel)]="charform.charequipment.equip17">
+        <label for="equip17"> Equipped? </label><input type="checkbox" name="isequip17" [(ngModel)]="charform.charequipment.isequip17">
       </div>
       <div>
-        <label for="equip18">Name, Description: </label><input type="text" name="equip18" ngModel>
-        <label for="equip18"> Equipped? </label><input type="checkbox" name="isequip18" ngModel>
+        <label for="equip18">Name, Description: </label><input type="text" name="equip18" [(ngModel)]="charform.charequipment.equip18">
+        <label for="equip18"> Equipped? </label><input type="checkbox" name="isequip18" [(ngModel)]="charform.charequipment.isequip18">
       </div>
       <div>
-        <label for="equip19">Name, Description: </label><input type="text" name="equip19" ngModel>
-        <label for="equip19"> Equipped? </label><input type="checkbox" name="isequip19" ngModel>
+        <label for="equip19">Name, Description: </label><input type="text" name="equip19" [(ngModel)]="charform.charequipment.equip19">
+        <label for="equip19"> Equipped? </label><input type="checkbox" name="isequip19" [(ngModel)]="charform.charequipment.isequip19">
       </div>
       <div>
-        <label for="equip20">Name, Description: </label><input type="text" name="equip20" ngModel>
-        <label for="equip20"> Equipped? </label><input type="checkbox" name="isequip20" ngModel>
+        <label for="equip20">Name, Description: </label><input type="text" name="equip20" [(ngModel)]="charform.charequipment.equip20">
+        <label for="equip20"> Equipped? </label><input type="checkbox" name="isequip20" [(ngModel)]="charform.charequipment.isequip20">
       </div>
     </div>
     <div ngModelGroup="charabilities">
       <h2>Abilities/Powers/Augments</h2>
       <div>
-        <label for="ability01">Name, Description: </label><input type="text" name="ability01" ngModel>      
+        <label for="ability01">Name, Description: </label><input type="text" name="ability01" [(ngModel)]="charform.charabilities.ability01">      
       </div>
       <div>
-        <label for="ability02">Name, Description: </label><input type="text" name="ability02" ngModel>      
+        <label for="ability02">Name, Description: </label><input type="text" name="ability02" [(ngModel)]="charform.charabilities.ability02">      
       </div>
       <div>
-        <label for="ability03">Name, Description: </label><input type="text" name="ability03" ngModel>      
+        <label for="ability03">Name, Description: </label><input type="text" name="ability03" [(ngModel)]="charform.charabilities.ability03">      
       </div>
       <div>
-        <label for="ability04">Name, Description: </label><input type="text" name="ability04" ngModel>      
+        <label for="ability04">Name, Description: </label><input type="text" name="ability04" [(ngModel)]="charform.charabilities.ability04">      
       </div>
       <div>
-        <label for="ability05">Name, Description: </label><input type="text" name="ability05" ngModel>      
+        <label for="ability05">Name, Description: </label><input type="text" name="ability05" [(ngModel)]="charform.charabilities.ability05">      
       </div>
       <div>
-        <label for="ability06">Name, Description: </label><input type="text" name="ability06" ngModel>      
+        <label for="ability06">Name, Description: </label><input type="text" name="ability06" [(ngModel)]="charform.charabilities.ability06">      
       </div>
       <div>
-        <label for="ability07">Name, Description: </label><input type="text" name="ability07" ngModel>      
+        <label for="ability07">Name, Description: </label><input type="text" name="ability07" [(ngModel)]="charform.charabilities.ability07">      
       </div>
       <div>
-        <label for="ability08">Name, Description: </label><input type="text" name="ability08" ngModel>      
+        <label for="ability08">Name, Description: </label><input type="text" name="ability08" [(ngModel)]="charform.charabilities.ability08">      
       </div>
       <div>
-        <label for="ability09">Name, Description: </label><input type="text" name="ability09" ngModel>      
+        <label for="ability09">Name, Description: </label><input type="text" name="ability09" [(ngModel)]="charform.charabilities.ability09">      
       </div>
       <div>
-        <label for="ability10">Name, Description: </label><input type="text" name="ability10" ngModel>      
+        <label for="ability10">Name, Description: </label><input type="text" name="ability10" [(ngModel)]="charform.charabilities.ability10">      
       </div>
     </div>    
     <p><button type="button" (click)="reset(charSheetForm)">Reset</button></p>

@@ -28,7 +28,7 @@ export class CharsheetComponent implements OnInit {
       chardef: 0,
       chargold: 0,
       chardeath: 0,
-      charhero: true,
+      charhero: false,
       charstats: {
         strbase: 0,
         strlife: 0,
