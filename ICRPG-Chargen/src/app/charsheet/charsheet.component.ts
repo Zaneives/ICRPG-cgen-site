@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -6,10 +6,13 @@ import { NgForm } from '@angular/forms';
   templateUrl: './charsheet.component.html',
   styleUrls: ['./charsheet.component.scss']
 })
-export class CharsheetComponent implements OnInit {
 
-  public charform = new CharSheet()
-  // charform!:CharSheet;
+export class CharsheetComponent implements OnInit {
+  
+  
+  // @ViewChild('charSheetForm',null) charform!: NgForm;
+  // public charform = new CharSheet()
+  charform!:CharSheet;
 
   onSubmit(sheetupdate:any): void {
     console.log(sheetupdate.value);
@@ -18,7 +21,7 @@ export class CharsheetComponent implements OnInit {
   constructor() {
   }
 
-  ngOnInit(): void {    
+  ngOnInit(): void {        
     this.charform = {
       charname: "Zenace",
       charworld: "",
@@ -137,7 +140,9 @@ export class CharsheetComponent implements OnInit {
   }
 
   reset(charSheetForm :NgForm) {
-    charSheetForm.reset();
+    // charSheetForm.reset();
+    // this.charSheetForm.setValue(this.charform);
+    this.ngOnInit()
   }
 
   
