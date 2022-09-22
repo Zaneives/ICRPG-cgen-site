@@ -1,55 +1,29 @@
-.bloo {
-    color: blue;
+*,
+*::before,
+*::after {
+    box-sizing: content-box;
 }
+
 .header {
     background-color: yellow;
 }
-
-div {
-    flex-grow: 1;
-}
-
 .container {
-    display: flex;
-    border: 6px solid black;
-    gap: 3px 7px;
-    margin: 0;
-    padding: 5px;
-    flex-flow: row wrap;
-    // width: min(900px, 100%);
-}
-.colflow {
-    flex-flow:column nowrap;
-    border: 1px solid black;
-    flex-grow: 0;
-}
-.flexbreak {
-    flex-basis: 100%;
-    height: 0;
-}
-.colbreak {
-    flex-basis: 100%;
-    width: 0;
+    text-align: left;
 }
 
-.width20pc {
-    width: max(15%, 150px);
-  }
-.width70pc {
-    width: max(70%, 150px);
+.grid {
+    display:block;
 }
 
 .charsheet {
-    background-color: ivory;
-    border-radius: 6px;
-    border-width: 4px;
+    background-color: ivory;    
 }
+
 .charinfo {
-    background-color: gold;
+    background-color: gold;    
 }
 .charstats {
     background-color: yellow;
-    top: 0px;
 }
 .chareff {
     background-color: orange;
@@ -57,10 +31,8 @@ div {
 .charstatus {
     background-color:red;
 }
-.charinventory {
+.charinv {
     background-color:rgb(86, 152, 228);
-    margin: 0;
-    padding: 0;
 }
 .charability {
     background-color:lime;
@@ -69,18 +41,41 @@ div {
     background-color:green;
 }
 
+
 .totaldie {
     font-size: 50px;
 }
 
+.gridA {grid-area:A; border: 1px solid; padding: .5em}
+.gridB {grid-area:B; border: 1px solid; padding: .5em}
+.gridC {grid-area:C; border: 1px solid; padding: .5em}
+.gridD {grid-area:D; border: 1px solid; padding: .5em}
+.gridE {grid-area:E; border: 1px solid; padding: .5em}
+.gridF {grid-area:F; border: 1px solid; padding: .5em}
+.gridG {grid-area:G; border: 1px solid; padding: .5em}
 
-@media (max-width: 600px) {
-    .bloo {
-        color: black;
-        background-color: green;
+@media (min-width: 705px) {
+    .grid {
+        display:grid;
+        grid-template-areas: 
+            "A A A A"
+            "B B C C"
+            "E E F F"
+            "E E D D"
+            "G G G G";
+        // grid-template-columns: 1fr 1fr 1fr;
     }
-    div {
-        flex: 1 1 100%;
-    }
+}
+
     
+@media (min-width: 60em) {
+    .grid {
+        display:grid;
+        grid-template-areas: 
+            "A A A A A A"
+            "B B C C D D"
+            "E E E F F F"
+            "G G G G G G";
+        // grid-template-columns: 1fr 1fr 1fr;
+    }
 }

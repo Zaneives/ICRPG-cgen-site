@@ -2,14 +2,14 @@
   This is the header
 </div>
 <h2>Character Sheet</h2>
-<form #charSheetForm="ngForm" (ngSubmit)="onSubmit(charSheetForm)">
-<div class="container grid">
-    <div class="charinfo gridA">
-      <div class="">
+<div class="charsheet container grid">
+  <form #charSheetForm="ngForm" (ngSubmit)="onSubmit(charSheetForm)">
+    <div class="chardetails">
+      <div>
         <label for="charname"> Character Name: </label>
         <input type="text" name="charname" [(ngModel)]="charform.charname">
       </div>
-      <div class="">
+      <div>
         <label for="charworld"> World Name: </label>
         <input type="text" name="charworld" [(ngModel)]="charform.charworld">
       </div>
@@ -26,7 +26,30 @@
         <input type="text" name="chartype" [(ngModel)]="charform.chartype">
       </div>
     </div>
-    <div ngModelGroup="charstats" class="charstats gridB">
+    <div>
+      <h2>Status</h2>    
+      <div>
+        <label for="charhp"> HP: </label>
+        <input type="number" name="charhp" [(ngModel)]="charform.charhp">
+      </div>
+      <div>
+        <label for="chardef"> Defense: </label>
+        <input type="number" name="chardef" [(ngModel)]="charform.chardef">
+      </div>
+      <div>
+        <label for="chargold"> Gold: </label>
+        <input type="number" name="chargold" [(ngModel)]="charform.chargold">
+      </div>
+      <div>
+        <label for="chardeath"> Death Timer: </label>
+        <input type="number" name="chardeath" [(ngModel)]="charform.chardeath">
+      </div>
+      <div>
+        <label for="charhero"> Hero Coin: </label>
+        <input type="checkbox" name="charhero" [(ngModel)]="charform.charhero">
+      </div>
+    </div>
+    <div ngModelGroup="charstats">
       <h2>Stats</h2>    
       <div>
         <h3>Strength</h3>
@@ -77,7 +100,7 @@
         <label for="chaloot">Loot: <input type="number" name="chaloot" [(ngModel)]="charform.charstats.chaloot"></label><br>      
       </div>
     </div>
-    <div ngModelGroup="charefforts" class="chareff gridC">
+    <div ngModelGroup="charefforts">
       <h2>Effort</h2>
       <div>
         <h3>Basic</h3>
@@ -120,30 +143,7 @@
         <label for="ultiloot">Loot: <input type="number" name="ultiloot" [(ngModel)]="charform.charefforts.ultiloot"></label><br>      
       </div>
     </div>
-    <div class="charstatus gridD">
-      <h2>Status</h2>    
-      <div>
-        <label for="charhp"> HP: </label>
-        <input type="number" name="charhp" [(ngModel)]="charform.charhp">
-      </div>
-      <div>
-        <label for="chardef"> Defense: </label>
-        <input type="number" name="chardef" [(ngModel)]="charform.chardef">
-      </div>
-      <div>
-        <label for="chargold"> Gold: </label>
-        <input type="number" name="chargold" [(ngModel)]="charform.chargold">
-      </div>
-      <div>
-        <label for="chardeath"> Death Timer: </label>
-        <input type="number" name="chardeath" [(ngModel)]="charform.chardeath">
-      </div>
-      <div>
-        <label for="charhero"> Hero Coin: </label>
-        <input type="checkbox" name="charhero" [(ngModel)]="charform.charhero">
-      </div>
-    </div>
-    <div ngModelGroup="charequipment" class="charinv gridE">
+    <div ngModelGroup="charequipment">
       <h2>Equipment</h2>
       <div>
         <label for="equip01">Name, Description: </label><input type="text" name="equip01" [(ngModel)]="charform.charequipment.equip01">
@@ -226,7 +226,7 @@
         <label for="equip20"> Equipped? </label><input type="checkbox" name="isequip20" [(ngModel)]="charform.charequipment.isequip20">
       </div>
     </div>
-    <div ngModelGroup="charabilities" class="charability gridF">
+    <div ngModelGroup="charabilities">
       <h2>Abilities/Powers/Augments</h2>
       <div>
         <label for="ability01">Name, Description: </label><input type="text" name="ability01" [(ngModel)]="charform.charabilities.ability01">      
@@ -258,35 +258,9 @@
       <div>
         <label for="ability10">Name, Description: </label><input type="text" name="ability10" [(ngModel)]="charform.charabilities.ability10">      
       </div>
-    </div>
-    <div class="charmastery gridG">
-      Mastery
-      <p><button type="button" (click)="reset(charSheetForm)">Reset</button></p>
-      <p><button type="submit">Submit</button></p>
-    </div>   
-  </div>
-</form>  
-{{charSheetForm.value | json}}
-<div class="grid">
-  <div class="gridA">
-    grid A      
-  </div>
-  <div class="gridB">
-    grid B
-  </div>
-  <div class="gridC">
-    grid C
-  </div>
-  <div class="gridD">
-    grid D
-  </div>
-  <div class="gridE">
-    grid E
-  </div>
-  <div class="gridF">
-    grid F
-  </div>
-  <div class="gridG">
-    grid G
-  </div>  
+    </div>    
+    <p><button type="button" (click)="reset(charSheetForm)">Reset</button></p>
+    <p><button type="submit">Submit</button></p>
+  </form>
 </div>
+{{charSheetForm.value | json}}
