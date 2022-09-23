@@ -25,25 +25,37 @@
 .charstats {
     background-color: yellow;
 }
+
+// div.input-number > input {
+//     background-color: blue;
+// }
+
+[type=number] {
+    // background-color: blue;
+    size: 2;
+    // width: 50px;
+
+}
+
+
 .chareff {
     background-color: orange;
 }
+
 .charstatus {
     background-color:red;
 }
+
 .charinv {
     background-color:rgb(86, 152, 228);
 }
+
 .charability {
     background-color:lime;
 }
+
 .charmastery {
     background-color:green;
-}
-
-
-.totaldie {
-    font-size: 50px;
 }
 
 .gridA {grid-area:A; border: 1px solid; padding: .5em}
